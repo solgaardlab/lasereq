@@ -96,4 +96,4 @@ def solve_laser(pulse_shape, params):
 if __name__ == "__main__":
   hv.extension('bokeh')
   lre = LaserRateEquations(name='Gain Switching in SDLs')
-  pn.serve(pn.Row(lre.param, lre.view), start=True, show=True, port=int(sys.argv[-1]))
+  pn.serve(pn.Row(lre.param, lre.view), start=True, show=True, port=int(sys.argv[-1]), websocket_origin='lasereq.herokuapp.com')
